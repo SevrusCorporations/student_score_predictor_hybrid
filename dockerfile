@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 
-# Install OpenJDK (needed for lrj.py -> Java bridge)
-RUN apt-get update && apt-get install -y openjdk-17-jdk && rm -rf /var/lib/apt/lists/*
+# Install OpenJDK (default-jdk → usually OpenJDK 17+)
+RUN apt-get update && apt-get install -y default-jdk && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
